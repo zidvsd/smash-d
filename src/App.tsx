@@ -3,6 +3,7 @@ import Navbar from "./components/layout/Navbar"
 import Hero from "./components/sections/Hero"
 import Bestsellers from "./components/sections/Bestsellers"
 import { useSmoothScroll } from "./components/hooks/useSmoothScroll"
+import Menu from "./components/sections/Menu"
 // Import your sections here
 // import Menu from "./sections/Menu"
 // import Bestsellers from "./sections/Bestsellers"
@@ -23,9 +24,8 @@ export function App() {
 
         {/* Other sections wrapped in a container */}
         <div className="mx-auto flex w-full max-w-360 flex-col gap-12 px-6 py-8">
-          {/* <Menu />
-
-<OurStory />
+          <Menu />
+          {/* <OurStory />
           <FindUs />
           <ContactForm /> */}
         </div>

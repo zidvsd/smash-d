@@ -21,7 +21,7 @@ const Hero = () => {
         keeping the burger fully visible as shown in your screenshot.
       */}
       <div className="mx-auto w-full max-w-360 px-6 py-[15vw] text-center md:py-[12vw] lg:py-[10vw]">
-        <h1 className="mb-4 font-heading text-4xl font-bold text-primary uppercase drop-shadow-[2px_2px_0px_rgba(201,3,24,1)] sm:text-5xl md:text-6xl lg:text-7xl">
+        <h1 className="mb-4 font-heading text-4xl font-bold text-primary uppercase drop-shadow-[4px_4px_0px_rgba(201,3,24,1)] sm:text-5xl md:text-6xl lg:text-7xl">
           Join The Revolution. <br />
           Smash a Burger Today.
         </h1>

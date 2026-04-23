@@ -31,7 +31,7 @@
       "price": 9.0,
       "tag": null,
       "description": "Single patty, classic fixings. Great for light appetites.",
-      "imageUrl": "https://placehold.co/400x400/0F0F0F/E5E7EB?text=Lil+Smasher"
+      "imageUrl": "/images/lil-smasher.png"
     },
     {
       "id": "burger_02",
@@ -40,7 +40,7 @@
       "price": 14.5,
       "tag": "BEST SELLER",
       "description": "Double beef, quadruple crispy bacon, BBQ sauce.",
-      "imageUrl": "https://placehold.co/400x400/0F0F0F/E5E7EB?text=Bacon+Blast"
+      "imageUrl": "/images/bacon-blast.png"
     },
     {
       "id": "burger_03",
@@ -49,7 +49,7 @@
       "price": 13.0,
       "tag": "PREMIUM",
       "description": "Avocado, sprouts, lime crema, pepper jack.",
-      "imageUrl": "https://placehold.co/400x400/0F0F0F/E5E7EB?text=Green+Monster"
+      "imageUrl": "/images/green-monster.png"
     },
     {
       "id": "burger_04",
@@ -58,7 +58,7 @@
       "price": 15.0,
       "tag": "SPICY AF",
       "description": "Smash burger topped with creamy mac & cheese.",
-      "imageUrl": "https://placehold.co/400x400/0F0F0F/E5E7EB?text=Mac+Attack"
+      "imageUrl": "/images/mac-attack.png"
     }
   ]
 }
