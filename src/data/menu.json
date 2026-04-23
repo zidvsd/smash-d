@@ -1,0 +1,64 @@
+{
+  "categories": ["Burgers", "Sides", "Drinks"],
+  "bestsellers": [
+    {
+      "id": "bs_og_smash",
+      "name": "The OG Smash",
+      "tag": "BEST SELLER",
+      "description": "Classic double patty, American cheese, grilled onions, and our secret Smash'd sauce.",
+      "imageUrl": "/images/og-smash.png"
+    },
+    {
+      "id": "bs_spicy_jalapeno",
+      "name": "Spicy Jalapeño",
+      "tag": "SPICY AF",
+      "description": "Double smash with fresh jalapeños, pepper jack, and our signature ghost pepper aioli.",
+      "imageUrl": "/images/spicy-jalapeno.png"
+    },
+    {
+      "id": "bs_truffle_shuffle",
+      "name": "Truffle Shuffle",
+      "tag": "PREMIUM",
+      "description": "Sautéed mushrooms, Swiss cheese, and real black truffle mayo on a toasted bun.",
+      "imageUrl": "/images/truffle-shuffle.png"
+    }
+  ],
+  "menuItems": [
+    {
+      "id": "burger_01",
+      "category": "Burgers",
+      "name": "The Lil' Smasher",
+      "price": 9.0,
+      "tag": null,
+      "description": "Single patty, classic fixings. Great for light appetites.",
+      "imageUrl": "https://placehold.co/400x400/0F0F0F/E5E7EB?text=Lil+Smasher"
+    },
+    {
+      "id": "burger_02",
+      "category": "Burgers",
+      "name": "Bacon Blast",
+      "price": 14.5,
+      "tag": "BEST SELLER",
+      "description": "Double beef, quadruple crispy bacon, BBQ sauce.",
+      "imageUrl": "https://placehold.co/400x400/0F0F0F/E5E7EB?text=Bacon+Blast"
+    },
+    {
+      "id": "burger_03",
+      "category": "Burgers",
+      "name": "Green Monster",
+      "price": 13.0,
+      "tag": "PREMIUM",
+      "description": "Avocado, sprouts, lime crema, pepper jack.",
+      "imageUrl": "https://placehold.co/400x400/0F0F0F/E5E7EB?text=Green+Monster"
+    },
+    {
+      "id": "burger_04",
+      "category": "Burgers",
+      "name": "The Mac Attack",
+      "price": 15.0,
+      "tag": "SPICY AF",
+      "description": "Smash burger topped with creamy mac & cheese.",
+      "imageUrl": "https://placehold.co/400x400/0F0F0F/E5E7EB?text=Mac+Attack"
+    }
+  ]
+}

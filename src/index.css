@@ -3,12 +3,10 @@
 @import "shadcn/tailwind.css";
 @import "@fontsource-variable/jetbrains-mono";
 @import "@fontsource-variable/epilogue";
-@import "@fontsource-variable/be-vietnam-pro";
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --font-heading: 'Epilogue Variable', sans-serif;
-  --font-body: 'Be Vietnam Pro Variable', sans-serif;
   --font-mono: 'JetBrains Mono Variable', monospace;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -151,4 +149,16 @@
 
 .hover-utility {
   @apply duration-200 ease-in-out transition-all;
+}
+
+.section-text-header {
+  @apply font-heading font-bold text-accent text-4xl italic uppercase tracking-wide;
+}
+
+.custom-container {
+  @apply flex max-w-360 mx-auto px-6 py-8;
+}
+
+html {
+  scroll-behavior: smooth;
 }
