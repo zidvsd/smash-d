@@ -1,19 +1,35 @@
 import { Button } from "@/components/ui/button"
+import Footer from "./components/layout/Footer"
+import Navbar from "./components/layout/Navbar"
+
+// Import your sections here
+// import Hero from "./sections/Hero"
+// import Menu from "./sections/Menu"
+// import Bestsellers from "./sections/Bestsellers"
+// import OurStory from "./sections/OurStory"
+// import FindUs from "./sections/FindUs"
+// import ContactForm from "./sections/ContactForm"
 
 export function App() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
+    <div className="bg-near-black flex min-h-svh flex-col">
+      {/* Navbar stays full width */}
+      <Navbar />
+
+      {/* Main Content: Centered with max-width 1440px */}
+      <main className="mx-auto w-full max-w-360 flex-1 px-6">
+        <div className="flex flex-col gap-12 py-8">
+          {/* <Hero />
+          <Menu />
+          <Bestsellers />
+          <OurStory />
+          <FindUs />
+          <ContactForm /> */}
         </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
+      </main>
+
+      {/* Footer stays full width */}
+      <Footer />
     </div>
   )
 }
