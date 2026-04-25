@@ -2,6 +2,8 @@
 
 A modern, vibrant burger restaurant website built with React, TypeScript, and Tailwind CSS. Features bold comic-book inspired design with dark mode support and smooth animations.
 
+**Live demo:** https://smash-d.vercel.app/
+
 ## Features
 
 - **Comic Book Design**: Bold, colorful UI with a retro comic aesthetic
