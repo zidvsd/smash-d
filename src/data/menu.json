@@ -23,6 +23,16 @@
       "imageUrl": "/images/truffle-shuffle.png"
     }
   ],
+  "featured": [
+    {
+      "id": "feat_triple_threat",
+      "name": "The Triple Threat",
+      "tag": null,
+      "price": 29.0,
+      "description": "Three patties, triple American cheese, caramelized onions, and double bacon. It's not just a burger, it's a commitment.",
+      "imageUrl": "/images/triple-threat.png"
+    }
+  ],
   "menuItems": [
     {
       "id": "burger_01",
@@ -33,6 +43,7 @@
       "description": "Single patty, classic fixings. Great for light appetites.",
       "imageUrl": "/images/lil-smasher.png"
     },
+
     {
       "id": "burger_02",
       "category": "Burgers",
@@ -59,6 +70,60 @@
       "tag": "SPICY AF",
       "description": "Smash burger topped with creamy mac & cheese.",
       "imageUrl": "/images/mac-attack.png"
+    },
+    {
+      "id": "side_01",
+      "category": "Sides",
+      "name": "Lava Fries",
+      "price": 8.5,
+      "tag": "SPICY AF",
+      "description": "Our triple-cooked spuds drowned in a volcano of liquid gold and spicy jalapeño heat. Handle with care!",
+      "imageUrl": "/images/lava-fries.png"
+    },
+    {
+      "id": "side_02",
+      "category": "Sides",
+      "name": "Smash'd Rings",
+      "price": 7.0,
+      "tag": null,
+      "description": "Jumbo onions, double-dipped in craft beer batter for a crunch that can be heard three blocks away.",
+      "imageUrl": "/images/smash-rings.png"
+    },
+    {
+      "id": "side_03",
+      "category": "Sides",
+      "name": "Fried Pickles",
+      "price": 6.5,
+      "tag": null,
+      "description": "Tangy dill spears fried to golden perfection. Served with a side of our legendary 'Boom Ranch' for maximum impact.",
+      "imageUrl": "/images/fried-pickles.png"
+    },
+    {
+      "id": "drink_01",
+      "category": "Drinks",
+      "name": "Vanilla Shake",
+      "price": 6.0,
+      "tag": null,
+      "description": "Real-deal bean vanilla, hand-spun until it's thick enough to stand a spoon in. Pure, unadulterated creamy bliss.",
+      "imageUrl": "/images/vanilla-shake.png"
+    },
+    {
+      "id": "drink_02",
+      "category": "Drinks",
+      "name": "Craft Soda",
+      "price": 4.0,
+      "tag": null,
+      "description": "Small-batch cane sugar sodas with a bite. No weak bubbles here—just high-voltage fizz and bold flavors.",
+      "imageUrl": "/images/craft-soda.png"
+    },
+    {
+      "id": "drink_03",
+      "category": "Drinks",
+      "name": "Ultra Shakes",
+      "price": 6.0,
+      "tag": "PREMIUM",
+      "description": "The ultimate dairy experience. Hand-spun with 100% premium local dairy and enough attitude to start a riot.",
+      "imageUrl": "/images/ultra-shakes.png"
     }
   ]
 }

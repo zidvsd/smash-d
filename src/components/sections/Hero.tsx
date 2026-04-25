@@ -16,10 +16,6 @@ const Hero = () => {
         />
       </div>
 
-      {/* Dynamic Padding using 'vw' (Viewport Width)
-        This ensures the height scales perfectly with the width of the screen,
-        keeping the burger fully visible as shown in your screenshot.
-      */}
       <div className="mx-auto w-full max-w-360 px-6 py-[15vw] text-center md:py-[12vw] lg:py-[10vw]">
         <h1 className="mb-4 font-heading text-4xl font-bold text-primary uppercase drop-shadow-[4px_4px_0px_rgba(201,3,24,1)] sm:text-5xl md:text-6xl lg:text-7xl">
           Join The Revolution. <br />
@@ -39,7 +35,7 @@ const Hero = () => {
           >
             Order Now
           </Button>
-          <Button className="h-12 bg-white px-10 text-lg font-black tracking-wider text-black uppercase italic hover:bg-gray-200">
+          <Button className="h-12 bg-card px-10 text-lg font-black tracking-wider text-foreground uppercase italic hover:bg-card/80">
             View Menu
           </Button>
         </div>

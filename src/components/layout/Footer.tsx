@@ -7,13 +7,13 @@ const Footer = () => {
     { full: "Privacy Policy", short: "Privacy", href: "/privacy" },
     { full: "Terms of Service", short: "Terms", href: "/terms" },
     { full: "Careers", short: "Careers", href: "/careers" },
-    { full: "Contact", short: "Contact", href: "/contact" },
+    { full: "Contact", short: "Contact", href: "find-us" },
   ]
 
   return (
     <footer className="bg-near-black w-full">
       {/* Top Border Line */}
-      <div className="hidden h-0.5 w-full bg-red-500 sm:block" />
+      <div className="hidden h-1 w-full bg-red-500 sm:block" />
 
       <div className="mx-auto flex max-w-360 flex-col items-center space-y-6 px-6 py-8">
         {/* LOGO: Switches color based on screen size */}
@@ -29,7 +29,7 @@ const Footer = () => {
             {links.slice(0, 3).map((link) => (
               <a
                 key={link.short}
-                href={link.href}
+                href={`#${link.href}`}
                 className="font-mono text-sm font-semibold tracking-tight text-foreground uppercase transition-colors hover:text-accent"
               >
                 {link.short}
@@ -50,7 +50,7 @@ const Footer = () => {
           {links.map((link) => (
             <a
               key={link.full}
-              href={link.href}
+              href={`#${link.href}`}
               className="text-sm font-bold tracking-widest text-muted-foreground uppercase transition-colors hover:text-foreground"
             >
               {link.full}

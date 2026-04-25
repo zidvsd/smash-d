@@ -11,19 +11,19 @@ const TagBadge = ({ tag }: BadgeProps) => {
   const getStyles = () => {
     switch (normalizedTag) {
       case "spicy af":
-        return "bg-red-600 text-white border-black border-2 -rotate-5"
+        return "bg-secondary text-white border-black border-2 -rotate-5"
       case "best seller":
-        return "bg-red-800 text-white border-black border-2 -rotate-10"
+        return "bg-destructive text-white border-black border-2 -rotate-10"
       case "premium":
-        return "bg-muted-foreground border-2 border-black  text-white rotate-5"
+        return "bg-zinc-700 border-2 border-black  text-white rotate-5"
       default:
-        return "bg-gray-800 text-white border-gray-600"
+        return "bg-muted text-white border-foreground border-2"
     }
   }
 
   return (
     <span
-      className={`absolute bottom-0 left-4 z-20 border-l-4 px-4 py-1 text-xs font-black tracking-tighter uppercase italic shadow-md ${getStyles()} `}
+      className={`absolute top-0 -left-4 z-20 border-l-4 px-4 py-1 text-xs font-black tracking-tighter uppercase italic shadow-md ${getStyles()} `}
     >
       {tag}
     </span>

@@ -152,11 +152,11 @@
 }
 
 .section-text-header {
-  @apply font-heading font-bold text-accent text-4xl uppercase tracking-wide;
+  @apply font-heading font-extrabold text-3xl md:text-4xl lg:text-5xl uppercase tracking-wide;
 }
 
 .custom-container {
-  @apply flex max-w-360 mx-auto px-6 py-8;
+  @apply max-w-360 mx-auto px-4 md:px-6 py-8;
 }
 
 @layer components {
@@ -164,7 +164,6 @@
     @apply border-zinc-800 border-2 border-foreground bg-white transition-colors duration-300;
     box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
   }
-
 
   .bestseller-card-image-wrapper {
     @apply relative border-b-2 border-foreground;
@@ -176,6 +175,30 @@
 
   .bestseller-card-description {
     @apply font-mono text-sm text-muted-foreground;
+  }
+
+  .shadow-button {
+    box-shadow: 4px 4px 0px 0px var(--foreground);
+  }
+
+  .shadow-button:active {
+    box-shadow: none;
+  }
+
+  .shadow-info-card-primary {
+    box-shadow: 8px 8px 0px 0px var(--primary);
+  }
+
+  .shadow-info-card-secondary {
+    box-shadow: 8px 8px 0px 0px var(--secondary);
+  }
+
+  .shadow-menu-tab {
+    box-shadow: 4px 4px 0px 0px var(--foreground);
+  }
+
+  .shadow-menu-tab:hover {
+    box-shadow: none;
   }
 }
 
