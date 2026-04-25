@@ -18,7 +18,7 @@ const Featured = () => {
         <div className="flex flex-col justify-center gap-6 bg-foreground p-8 text-background md:p-12">
           <div className="space-y-4">
             <h2 className="section-text-header">{item.name}</h2>
-            <div className="h-1 w-16 bg-secondary"></div>
+            <div className="h-1 w-24 bg-secondary"></div>
           </div>
           <p className="font-body-lg text-lg font-bold text-background md:text-2xl">
             {item.description}

@@ -161,16 +161,15 @@
 
 @layer components {
   .bestseller-card {
-    @apply border-zinc-800 border-2 border-foreground bg-white transition-colors duration-300;
-    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+    @apply bg-card transition-colors duration-300 shadow-xl;
   }
 
   .bestseller-card-image-wrapper {
-    @apply relative border-b-2 border-foreground;
+    @apply relative;
   }
 
   .bestseller-card-title {
-    @apply font-heading text-xl font-medium text-accent-foreground uppercase;
+    @apply font-heading text-xl font-bold text-foreground uppercase;
   }
 
   .bestseller-card-description {

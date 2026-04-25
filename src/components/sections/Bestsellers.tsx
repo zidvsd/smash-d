@@ -1,5 +1,6 @@
 import menuData from "@/data/menu.json"
 import TagBadge from "../TagBadge"
+import ViewImage from "../ViewImage"
 const Bestsellers = () => {
   const { bestsellers } = menuData
   return (
@@ -27,24 +28,35 @@ const Bestsellers = () => {
         </div>
         <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
           {bestsellers.map((item) => (
-            <div key={item.id} className="bestseller-card">
-              <div className="bestseller-card-image-wrapper">
-                <img
-                  src={item.imageUrl}
-                  alt={item.name}
-                  className="aspect-video w-full object-cover"
-                />
-                <TagBadge tag={item.tag} />
-              </div>
+            <ViewImage key={item.id} src={item.imageUrl} alt={item.name}>
+              <div className="bestseller-card group cursor-pointer shadow-xl transition-all duration-300">
+                {/* 1. Relative parent for the badge positioning */}
+                <div className="bestseller-card-image-wrapper relative">
+                  {/* 2. Inner wrapper ONLY for the image zoom clipping */}
+                  <div className="overflow-hidden">
+                    <img
+                      src={item.imageUrl}
+                      alt={item.name}
+                      className="aspect-video w-full object-cover saturate-[1.2] transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
 
-              <div className="p-6">
-                <h3 className="bestseller-card-title">{item.name}</h3>
-                <p className="bestseller-card-description">
-                  {item.description}
-                </p>
+                  {/* 3. Badge stays OUTSIDE the overflow-hidden div but INSIDE the relative div */}
+                  <TagBadge tag={item.tag} />
+                </div>
+
+                <div className="p-6">
+                  <h3 className="bestseller-card-title">{item.name}</h3>
+                  <p className="bestseller-card-description line-clamp-3">
+                    {item.description}
+                  </p>
+                  <div className="mt-4 text-xs font-black text-destructive uppercase italic">
+                    Click to enlarge +
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            </ViewImage>
+          ))}{" "}
         </div>
       </div>
     </section>

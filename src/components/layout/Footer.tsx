@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="mx-auto flex max-w-360 flex-col items-center space-y-6 px-6 py-8">
         {/* LOGO: Switches color based on screen size */}
         <a href="#hero">
-          <h1 className="cursor-pointer font-heading text-3xl font-bold tracking-tighter text-red-500 uppercase italic transition-colors sm:text-4xl">
+          <h1 className="cursor-pointer font-heading text-3xl font-bold tracking-tighter text-red-500 uppercase italic drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-colors sm:text-4xl dark:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
             Smash'd
           </h1>
         </a>

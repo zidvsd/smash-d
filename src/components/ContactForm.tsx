@@ -1,9 +1,14 @@
 import { Share2, MapPin } from "lucide-react"
+import { memo } from "react"
 import { Button } from "./ui/button"
-export const ContactForm = () => {
+
+const ContactForm = memo(() => {
+  const inputClasses =
+    "w-full border-2 border-foreground bg-foreground p-3 text-background transition-all outline-none focus:border-secondary"
+
   return (
     <div className="space-y-8 lg:col-span-2">
-      <div className="comic-card border-4 border-black bg-accent p-8 text-black">
+      <div className="bg-primary p-8 text-foreground">
         <h2 className="mb-6 font-heading text-2xl font-black uppercase md:text-3xl">
           Say Hello!
         </h2>
@@ -14,8 +19,8 @@ export const ContactForm = () => {
               Your Name
             </label>
             <input
-              autoComplete={"off"}
-              className="w-full border-2 border-black bg-black p-3 text-white transition-all outline-none focus:border-accent dark:placeholder:text-zinc-400"
+              autoComplete="off"
+              className={inputClasses}
               placeholder="BURGER LOVER"
               type="text"
             />
@@ -26,7 +31,7 @@ export const ContactForm = () => {
             </label>
             <input
               autoComplete="off"
-              className="w-full border-2 border-black bg-black p-3 text-white transition-all outline-none focus:border-accent dark:placeholder:text-zinc-400"
+              className={inputClasses}
               placeholder="ME@SMASHD.COM"
               type="email"
             />
@@ -36,31 +41,37 @@ export const ContactForm = () => {
               Message
             </label>
             <textarea
-              className="h-32 w-full border-2 border-black bg-black p-3 text-white transition-all outline-none focus:border-accent dark:placeholder:text-zinc-400"
+              className={`${inputClasses} h-32`}
               placeholder="HOW CAN WE HELP?"
-            ></textarea>
+            />
           </div>
-          <Button className="w-full bg-black py-6 text-white" variant={"ghost"}>
+          <Button
+            className="w-full bg-foreground py-6 text-background"
+            variant="ghost"
+          >
             Send Message
           </Button>
         </form>
       </div>
 
-      {/* Social/Action Buttons */}
       <div className="flex gap-4">
         <Button
           variant="ghost"
-          className="flex flex-1 items-center justify-center border-4 border-black bg-zinc-800 py-8 text-white transition-colors hover:border-transparent hover:bg-accent active:translate-x-1 active:translate-y-1"
+          className="flex flex-1 items-center justify-center bg-muted py-8 text-foreground transition-colors hover:bg-secondary active:translate-x-1 active:translate-y-1"
         >
           <Share2 className="size-6" />
         </Button>
         <Button
-          variant={"ghost"}
-          className="flex flex-1 items-center justify-center border-4 border-black bg-zinc-800 py-8 text-white transition-colors hover:border-transparent hover:bg-accent active:translate-x-1 active:translate-y-1"
+          variant="ghost"
+          className="flex flex-1 items-center justify-center bg-muted py-8 text-foreground transition-colors hover:bg-secondary active:translate-x-1 active:translate-y-1"
         >
           <MapPin className="size-6" />
         </Button>
       </div>
     </div>
   )
-}
+})
+
+ContactForm.displayName = "ContactForm"
+
+export { ContactForm }
