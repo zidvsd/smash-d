@@ -1,6 +1,8 @@
 import menuData from "@/data/menu.json"
 import TagBadge from "../TagBadge"
 import ViewImage from "../ViewImage"
+import StaggerWrapper from "../animations/StaggerWrapper"
+import { StaggerItem } from "../animations/StaggerItem"
 const Bestsellers = () => {
   const { bestsellers } = menuData
   return (
@@ -26,8 +28,9 @@ const Bestsellers = () => {
             </h2>
           </div>
         </div>
-        <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <StaggerWrapper className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
           {bestsellers.map((item) => (
+               <StaggerItem key={item.id}>
             <ViewImage key={item.id} src={item.imageUrl} alt={item.name}>
               <div className="bestseller-card group cursor-pointer shadow-xl transition-all duration-300">
                 {/* 1. Relative parent for the badge positioning */}
@@ -56,8 +59,9 @@ const Bestsellers = () => {
                 </div>
               </div>
             </ViewImage>
+            </StaggerItem>
           ))}{" "}
-        </div>
+        </StaggerWrapper>
       </div>
     </section>
   )

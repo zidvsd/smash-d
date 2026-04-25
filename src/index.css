@@ -140,10 +140,15 @@
 
   body {
     @apply bg-background text-foreground;
+    width: 100%;
+    position: relative;
   }
 
   html {
     @apply font-mono;
+    scrollbar-gutter: stable;
+    /* OR: Force scrollbar to always show if you prefer */
+    scroll-behavior: smooth;
   }
 }
 
@@ -188,6 +193,7 @@
     box-shadow: 8px 8px 0px 0px var(--primary);
   }
 
+
   .shadow-info-card-secondary {
     box-shadow: 8px 8px 0px 0px var(--secondary);
   }
@@ -199,8 +205,4 @@
   .shadow-menu-tab:hover {
     box-shadow: none;
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }

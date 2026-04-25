@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative flex w-full flex-col items-center justify-center overflow-hidden border-b-4 border-b-accent"
+      className="relative flex w-full flex-col items-center justify-center overflow-hidden border-b-4 border-b-accent md:py-8 lg:py-12"
     >
       {/* Background Image Container */}
       <div className="absolute inset-0 -z-10">

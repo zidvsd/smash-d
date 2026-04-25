@@ -5,7 +5,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog"
-
+import { motion } from "motion/react"
 type ViewImageProps = {
   src: string
   alt?: string
@@ -43,14 +43,21 @@ const ViewImage = ({
           Full size preview of {alt}
         </DialogDescription>
 
-        {/* The Image Panel */}
-        <div className="relative">
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{
+            duration: 0.3,
+            ease: [0.22, 1, 0.36, 1],
+          }}
+          className="relative"
+        >
           <img
             src={src}
             alt={alt}
             className="h-auto w-full object-contain saturate-[1.2]"
           />
-        </div>
+        </motion.div>
       </DialogContent>
     </Dialog>
   )

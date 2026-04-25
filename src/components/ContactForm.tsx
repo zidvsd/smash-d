@@ -57,13 +57,13 @@ const ContactForm = memo(() => {
       <div className="flex gap-4">
         <Button
           variant="ghost"
-          className="flex flex-1 items-center justify-center bg-muted py-8 text-foreground transition-colors hover:bg-secondary active:translate-x-1 active:translate-y-1"
+          className="flex flex-1 items-center justify-center bg-muted py-8 text-foreground transition-colors hover:bg-primary active:translate-x-1 active:translate-y-1"
         >
           <Share2 className="size-6" />
         </Button>
         <Button
           variant="ghost"
-          className="flex flex-1 items-center justify-center bg-muted py-8 text-foreground transition-colors hover:bg-secondary active:translate-x-1 active:translate-y-1"
+          className="flex flex-1 items-center justify-center bg-muted py-8 text-foreground transition-colors hover:bg-primary active:translate-x-1 active:translate-y-1"
         >
           <MapPin className="size-6" />
         </Button>

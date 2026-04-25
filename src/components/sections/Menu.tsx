@@ -3,6 +3,9 @@ import menuData from "@/data/menu.json"
 import TagBadge from "../TagBadge"
 import { Button } from "../ui/button"
 import ViewImage from "../ViewImage"
+import { motion } from "motion/react"
+import StaggerWrapper from "../animations/StaggerWrapper"
+import { StaggerItem } from "../animations/StaggerItem"
 const Menu = memo(() => {
   const { menuItems } = menuData
   const tabs: string[] = ["Burgers", "Sides", "Drinks"]
@@ -45,45 +48,40 @@ const Menu = memo(() => {
           ))}
         </div>
 
-        <div
+        <StaggerWrapper
+          key={currentTab}
           className={`grid grid-cols-1 gap-8 md:grid-cols-2 ${getGridCols(filteredItems.length)}`}
         >
           {filteredItems.map((item) => (
-            <ViewImage key={item.id} src={item.imageUrl} alt={item.name}>
-              {/* By wrapping the content in ViewImage, the entire card becomes the Trigger */}
-              <div className="bestseller-card group w-full max-w-[320px] cursor-pointer place-self-center p-4">
-                <div className="bestseller-card-image-wrapper">
-                  <img
-                    src={item.imageUrl}
-                    alt={item.name}
-                    className="aspect-video w-full object-cover lg:aspect-square"
-                  />
-                  <TagBadge tag={item.tag} />
-                </div>
+            <StaggerItem key={item.id}>
+              <motion.div className="w-full max-w-[320px] place-self-center">
+                <ViewImage src={item.imageUrl} alt={item.name}>
+                  <div className="bestseller-card group cursor-pointer p-4">
+                    <div className="bestseller-card-image-wrapper">
+                      <img
+                        src={item.imageUrl}
+                        alt={item.name}
+                        className="aspect-video w-full object-cover lg:aspect-square"
+                      />
+                      <TagBadge tag={item.tag} />
+                    </div>
 
-                <div className="mb-2 flex items-start justify-between pt-4">
-                  <h3 className="bestseller-card-title text-wrap">
-                    {item.name}
-                  </h3>
-                  <span className="font-mono font-bold text-destructive">
-                    ${item.price.toFixed(2)}
-                  </span>
-                </div>
+                    <div className="mb-2 flex items-start justify-between pt-4">
+                      <h3 className="bestseller-card-title">{item.name}</h3>
+                      <span className="font-mono font-bold text-destructive">
+                        ${item.price.toFixed(2)}
+                      </span>
+                    </div>
 
-                <p className="bestseller-card-description line-clamp-2">
-                  {item.description}
-                </p>
-
-                <div className="mt-4 h-0 border-t-2 border-dashed border-muted-foreground/30" />
-
-                {/* This button now acts as part of the DialogTrigger */}
-                <Button className="mt-4 w-full bg-foreground text-xs font-black text-background uppercase italic hover:bg-foreground/80">
-                  View Item
-                </Button>
-              </div>
-            </ViewImage>
+                    <p className="bestseller-card-description line-clamp-2">
+                      {item.description}
+                    </p>
+                  </div>
+                </ViewImage>
+              </motion.div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerWrapper>
       </div>
     </section>
   )
