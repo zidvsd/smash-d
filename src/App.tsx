@@ -47,7 +47,7 @@ export function App() {
       </main>
       <Footer />
       <div className="fixed top-1/2 right-0 z-100 -translate-y-1/2">
-        <div className="rounded-l-xl border-t border-b border-l border-neutral-300 bg-background p-2 shadow-xl dark:border-zinc-700">
+        <div className="rounded-l-xl border-t border-b border-l border-neutral-300 bg-background p-1 shadow-xl sm:p-2 dark:border-zinc-700">
           <ThemeToggle />
         </div>
       </div>

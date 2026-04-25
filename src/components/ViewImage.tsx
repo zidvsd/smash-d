@@ -21,44 +21,46 @@ const ViewImage = ({
 }: ViewImageProps) => {
   return (
     <Dialog>
-      {/* If 'children' exists, use it as the trigger (e.g., the whole Card).
+      <motion.div
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{
+          duration: 0.3,
+          ease: [0.22, 1, 0.36, 1],
+        }}
+        className="relative z-100"
+      >
+        {/* If 'children' exists, use it as the trigger (e.g., the whole Card).
           If not, default back to the clickable image.
       */}
-      <DialogTrigger asChild>
-        {children ? (
-          children
-        ) : (
-          <img
-            src={src}
-            alt={alt}
-            className={`cursor-pointer transition-opacity hover:opacity-90 ${className}`}
-          />
-        )}
-      </DialogTrigger>
+        <DialogTrigger asChild>
+          {children ? (
+            children
+          ) : (
+            <img
+              src={src}
+              alt={alt}
+              className={`cursor-pointer transition-opacity hover:opacity-90 ${className}`}
+            />
+          )}
+        </DialogTrigger>
 
-      <DialogContent className="max-w-[95vw] border-none bg-transparent p-0 shadow-none focus:outline-none md:max-w-5xl">
-        {/* Screen Reader Essentials */}
-        <DialogTitle className="sr-only">View {alt}</DialogTitle>
-        <DialogDescription className="sr-only">
-          Full size preview of {alt}
-        </DialogDescription>
+        <DialogContent className="flex max-h-[90vh] max-w-[95vw] items-center justify-center border-none bg-transparent p-0 shadow-none focus:outline-none">
+          {/* Screen Reader Essentials */}
+          <DialogTitle className="sr-only">View {alt}</DialogTitle>
+          <DialogDescription className="sr-only">
+            Full size preview of {alt}
+          </DialogDescription>
 
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          animate={{ scale: 1, opacity: 1 }}
-          transition={{
-            duration: 0.3,
-            ease: [0.22, 1, 0.36, 1],
-          }}
-          className="relative"
-        >
-          <img
-            src={src}
-            alt={alt}
-            className="h-auto w-full object-contain saturate-[1.2]"
-          />
-        </motion.div>
-      </DialogContent>
+          <div className="relative">
+            <img
+              src={src}
+              alt={alt}
+              className="h-auto w-full object-contain saturate-[1.2]"
+            />
+          </div>
+        </DialogContent>
+      </motion.div>
     </Dialog>
   )
 }

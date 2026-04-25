@@ -1,5 +1,5 @@
 import { SendHorizonal, UtensilsCrossed, MapPin } from "lucide-react"
-
+import logo from "/images/logo.png"
 const Footer = () => {
   const currentYear = new Date().getFullYear()
 
@@ -13,14 +13,19 @@ const Footer = () => {
   return (
     <footer className="bg-near-black w-full">
       {/* Top Border Line */}
-      <div className="hidden h-1 w-full bg-red-500 sm:block" />
+      <div className="block h-1 w-full bg-red-500 sm:block" />
 
       <div className="mx-auto flex max-w-360 flex-col items-center space-y-6 px-6 py-8">
         {/* LOGO: Switches color based on screen size */}
-        <a href="#hero">
+        <a href="#hero" className="flex items-center gap-2">
           <h1 className="cursor-pointer font-heading text-3xl font-bold tracking-tighter text-red-500 uppercase italic drop-shadow-[4px_4px_0px_rgba(0,0,0,1)] transition-colors sm:text-4xl dark:drop-shadow-[4px_4px_0px_rgba(255,255,255,1)]">
             Smash'd
           </h1>
+          <img
+            src={logo}
+            alt="Smash'd Logo"
+            className="size-10 object-contain md:size-12 xl:size-14"
+          />
         </a>
         {/* MOBILE LINKS & ICONS */}
         <nav className="flex flex-col items-center gap-6 sm:hidden">

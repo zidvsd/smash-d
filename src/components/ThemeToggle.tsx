@@ -49,14 +49,13 @@ export default function ThemeToggle() {
   return (
     <>
       <Button
-        size="icon"
         onClick={toggleTheme}
-        className="rounded-full bg-transparent text-primary"
+        className="rounded-full bg-transparent p-0 text-primary"
       >
         {isDark ? (
-          <Sun className="z-50 size-8" />
+          <Sun className="z-50 size-6" />
         ) : (
-          <Moon className="z-50 size-8" />
+          <Moon className="z-50 size-6" />
         )}
       </Button>
 
