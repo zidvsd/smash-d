@@ -7,12 +7,16 @@ A modern, vibrant burger restaurant website built with React, TypeScript, and Ta
 ## Features
 
 - **Comic Book Design**: Bold, colorful UI with a retro comic aesthetic
-- **Dark Mode Support**: Automatic dark/light theme switching using CSS variables
+- **Dark Mode Support**: Automatic dark/light theme switching using CSS variables with smooth View Transition API animations
 - **Responsive Layout**: Mobile-first design that adapts to all screen sizes
-- **Smooth Animations**: Subtle transitions and hover effects for enhanced UX
+- **Smooth Animations**: Subtle transitions and hover effects for enhanced UX, including staggered animations for items
 - **Menu System**: Interactive burger menu with categories and filtering
 - **Featured Products**: Showcase hero section for promotional items
-- **Contact Section**: Integrated contact form and location map
+- **Contact Section**: Integrated contact form, location map, and social sharing buttons
+- **Image Lightbox**: Click-to-expand modal for viewing product images in full size with animations
+- **Product Tags & Badges**: Visual tags for special items (Best Seller, Spicy AF, Premium) with unique styling
+- **Mobile Navigation**: Responsive hamburger menu for seamless mobile experience
+- **Smooth Scroll Navigation**: Automatic smooth scrolling between page sections via anchor links
 - **Accessibility**: Semantic HTML and keyboard navigation support
 
 ## Quick Start
@@ -59,10 +63,16 @@ Serves the production build locally
 ```
 src/
 ├── components/
-│   ├── layout/           # Navbar, Footer
-│   ├── sections/         # Hero, Menu, Bestsellers, Featured, etc
-│   ├── ui/              # Reusable UI components (Button, Avatar)
-│   ├── hooks/           # Custom React hooks
+│   ├── animations/       # InView, SectionWrapper, StaggerItem/Wrapper
+│   ├── hooks/           # Custom React hooks (useSmoothScroll)
+│   ├── layout/          # Navbar, Footer, MobileMenu
+│   ├── sections/        # Hero, Menu, Bestsellers, Featured, etc
+│   ├── ui/              # Reusable UI components (Button, Avatar, Dialog)
+│   ├── ContactForm.tsx  # Contact form with sharing buttons
+│   ├── ContactMap.tsx   # Location map component
+│   ├── TagBadge.tsx     # Product tag badges
+│   ├── ThemeToggle.tsx  # Dark mode toggle with View Transitions
+│   ├── ViewImage.tsx    # Image modal/lightbox component
 │   └── theme-provider.tsx
 ├── data/                # Menu and navigation JSON data
 ├── lib/                 # Utility functions
@@ -77,7 +87,8 @@ src/
 - **TypeScript** - Type safety and developer experience
 - **Tailwind CSS 4** - Utility-first styling with custom theme
 - **Vite** - Lightning-fast build tool
-- **Motion** - Animation library
+- **Motion** - Animation library for staggered and smooth animations
+- **Radix UI** - Unstyled, accessible UI primitives (dialogs, modals)
 - **Lucide React** - Icon library
 
 ## Development Scripts
